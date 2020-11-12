@@ -1,6 +1,7 @@
 #pragma once
 
 #include "kbEvents.h"
+#include "kbSystem.h"
 
 namespace kb {
 

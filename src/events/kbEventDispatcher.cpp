@@ -3,7 +3,6 @@
 #include <queue>
 
 #include "kbDebug.h"
-#include "kbOutput.h"
 
 namespace kb {
 

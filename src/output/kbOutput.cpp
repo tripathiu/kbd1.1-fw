@@ -36,10 +36,4 @@ void KeySender::popQ() {
   }
 }
 
-namespace Global {
-std::vector<kb::Process*> process;
-kb::KeySender keySender;
-
-}  // namespace Global
-
 }  // namespace kb

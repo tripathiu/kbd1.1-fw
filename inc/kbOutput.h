@@ -16,11 +16,4 @@ class KeySender : public Process {
  private:
 };
 
-namespace Global {
-
-extern std::vector<kb::Process*> process;
-extern kb::KeySender keySender;
-
-}  // namespace Global
-
 }  // namespace kb
