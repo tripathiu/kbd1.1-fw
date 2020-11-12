@@ -11,6 +11,7 @@ include(CPack)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/debug)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/events)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/keymatrix)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/input)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/output)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/system)
 
@@ -20,6 +21,7 @@ target_link_libraries(kbd-fw PUBLIC
     kbSystem
     kbDebug 
     kbKeySender
+    kbInput
     kbKeyMatrix
     kbEvents
     pthread

@@ -1,17 +1,22 @@
 #include "proc/kbSystem.h"
 
 #include "kbDebug.h"
+#include "proc/kbSystemFcns.h"
 
 namespace kb {
 namespace System {
 
 std::vector<Process*> process;
 KeySender keySender;
+KeyInput keyInput;
 
 void init() {
   System::process.push_back(&System::keySender);
+  System::process.push_back(&System::keyInput);
   std::thread ks([&]() { System::keySender.run(); });
+  std::thread ki([&]() { System::keyInput.run(); });
   ks.detach();
+  ki.detach();
 }
 
 bool dispatchEvt(const Event& evt) {

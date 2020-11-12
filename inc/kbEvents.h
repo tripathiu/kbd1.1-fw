@@ -8,6 +8,7 @@ enum EvtType {
   KeyDown,
   KeyHold,
   KeyRelease,
+  Unknown,
 };
 
 /*
