@@ -16,7 +16,7 @@ enum EvtType {
 using EvtCtxt = int;
 
 /*
- * Abstract class for events
+ * Type for events
  */
 struct Event {
   Event(EvtType, EvtCtxt = 0);
