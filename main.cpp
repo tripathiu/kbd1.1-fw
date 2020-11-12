@@ -1,14 +1,18 @@
+#include <queue>
 #include <vector>
 
 #include "kbDebug.h"
 #include "kbEventDispatcher.h"
 #include "kbEvents.h"
 #include "kbKeyMatrix.h"
+#include "kbOutput.h"
 
 int main() {
   using namespace kb;
 
   Debug::print("Hello World");
+
+  Global::process.push_back(&Global::keySender);
 
   Event evKd = Map::getEvent(Map::XY{1, 3});
   Event evKr = Map::getEvent(Map::XY{2, 4});
@@ -17,7 +21,7 @@ int main() {
   std::vector<Event> list = {evKd, evKr, evKh};
 
   for (auto& evt : list) {
-    EvtDispatcher::get().addToQueue(evt);
+    dispatch(evt);
   }
 
   return 0;

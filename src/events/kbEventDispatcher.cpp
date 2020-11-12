@@ -1,18 +1,15 @@
 #include "kbEventDispatcher.h"
 
+#include <queue>
+
 #include "kbDebug.h"
+#include "kbOutput.h"
 
 namespace kb {
 
-bool EvtDispatcher::addToQueue(Event evt) {
-  if (evt.getEvtType() == KeyDown) {
-    Debug::print("Key Down: " + std::to_string(evt.getEvtCtxt()));
-  } else if (evt.getEvtType() == KeyRelease) {
-    Debug::print("Key Release: " + std::to_string(evt.getEvtCtxt()));
-  } else if (evt.getEvtType() == KeyHold) {
-    Debug::print("Key Hold: " + std::to_string(evt.getEvtCtxt()));
-  } else {
-    Debug::print("Unrecognized Event");
+bool dispatch(Event evt) {
+  for (auto& proc : Global::process) {
+    proc->procEvent(evt);
   }
   return true;
 }

@@ -12,6 +12,7 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/debug)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/events)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/keys)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/keymatrix)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/output)
 
 add_executable(kbd-fw main.cpp)
 target_include_directories(kbd-fw PUBLIC ${PROJECT_SOURCE_DIR}/inc)
@@ -19,4 +20,5 @@ target_link_libraries(kbd-fw PUBLIC
     kbDebug 
     eventDispatcher
     kbKeyMatrix
-    events)
+    events
+)

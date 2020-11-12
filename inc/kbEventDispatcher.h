@@ -5,22 +5,8 @@
 namespace kb {
 
 /*
- *  Singleton Event Dispatcher
+ * Returns true is dispatch successful
  */
-class EvtDispatcher {
- public:
-  static EvtDispatcher& get() {
-    static EvtDispatcher inst;
-    return inst;
-  }
-
-  /*
-   * Returns true is dispatch successful
-   */
-  bool addToQueue(Event);
-
- private:
-  EvtDispatcher(){};
-};
+bool dispatch(Event);
 
 }  // namespace kb
