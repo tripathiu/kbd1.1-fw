@@ -21,6 +21,6 @@ target_link_libraries(kbd-fw PUBLIC
     kbDebug 
     kbOutput 
     kbKeyMatrix
-    events
+    kbEvents
     pthread
 )
