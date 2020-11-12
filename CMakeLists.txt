@@ -21,4 +21,5 @@ target_link_libraries(kbd-fw PUBLIC
     eventDispatcher
     kbKeyMatrix
     events
+    pthread
 )
