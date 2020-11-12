@@ -17,9 +17,9 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/system)
 add_executable(kbd-fw main.cpp)
 target_include_directories(kbd-fw PUBLIC ${PROJECT_SOURCE_DIR}/inc)
 target_link_libraries(kbd-fw PUBLIC
-    kbDebug 
     kbSystem
-    eventDispatcher
+    kbDebug 
+    kbOutput 
     kbKeyMatrix
     events
     pthread

@@ -6,12 +6,16 @@
 #include "kbProcess.h"
 
 namespace kb {
-namespace Global {
-
-extern std::vector<kb::Process*> process;
+namespace System {
 
 // processes
+extern std::vector<kb::Process*> process;
 extern kb::KeySender keySender;
 
-}  // namespace Global
+// functions
+void init();
+bool dispatchEvt(const Event&);
+void wait();
+
+}  // namespace System
 }  // namespace kb
