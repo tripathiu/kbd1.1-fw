@@ -3,9 +3,14 @@
 #include "kbEvents.h"
 
 namespace kb {
-namespace Mapping {
+namespace Map {
 
-Event getEvent(int row, int col);
+struct XY {
+  char row;
+  char col;
+};
 
-}
+Event getEvent(XY);
+
+}  // namespace Map
 }  // namespace kb

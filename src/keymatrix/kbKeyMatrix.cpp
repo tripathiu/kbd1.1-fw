@@ -1,16 +1,16 @@
 #include "kbKeyMatrix.h"
 
 namespace kb {
-namespace Mapping {
+namespace Map {
 
-Event getEvent(int row, int col) {
-  if (row == 1)
-    return Event(KeyDown, col);
-  else if (row == 2)
-    return Event(KeyHold, col);
+Event getEvent(XY pos) {
+  if (pos.row == 1)
+    return Event(KeyDown, pos.col);
+  else if (pos.row == 2)
+    return Event(KeyHold, pos.col);
   else
-    return Event(KeyRelease, col);
+    return Event(KeyRelease, pos.col);
 }
 
-}  // namespace Mapping
+}  // namespace Map
 }  // namespace kb

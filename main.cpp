@@ -6,16 +6,18 @@
 #include "kbKeyMatrix.h"
 
 int main() {
-  kb::Debug::print("Hello World");
+  using namespace kb;
 
-  kb::Event evKd = kb::Mapping::getEvent(1, 10);
-  kb::Event evKr = kb::Mapping::getEvent(2, 10);
-  kb::Event evKh = kb::Mapping::getEvent(3, 10);
+  Debug::print("Hello World");
 
-  std::vector<kb::Event> list = {evKd, evKr, evKh};
+  Event evKd = Map::getEvent(Map::XY{1, 3});
+  Event evKr = Map::getEvent(Map::XY{2, 4});
+  Event evKh = Map::getEvent(Map::XY{3, 6});
+
+  std::vector<Event> list = {evKd, evKr, evKh};
 
   for (auto& evt : list) {
-    kb::EvtDispatcher::get().addToQueue(evt);
+    EvtDispatcher::get().addToQueue(evt);
   }
 
   return 0;
