@@ -10,7 +10,7 @@ KeySender keySender;
 
 void init() {
   System::process.push_back(&System::keySender);
-  std::thread ks([&]() { System::keySender.popQ(); });
+  std::thread ks([&]() { System::keySender.run(); });
   ks.detach();
 }
 

@@ -9,11 +9,11 @@ KeySender::KeySender() {}
 void KeySender::procEvent(const Event& evt) {
   auto type = evt.getEvtType();
   if (type == KeyRelease || type == KeyDown || type == KeyHold) {
-    pushToQ(evt);
+    _push(evt);
   }
 }
 
-void KeySender::popQ() {
+void KeySender::run() {
   while (1) {
     if (_evtQ.size() > 0) {
       // here is how the events are processed
