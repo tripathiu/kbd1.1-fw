@@ -2,8 +2,8 @@
 
 #include <vector>
 
-#include "kbOutput.h"
-#include "kbProcess.h"
+#include "output/kbKeySender.h"
+#include "proc/kbProcess.h"
 
 namespace kb {
 namespace System {

@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "kbProcess.h"
+#include "proc/kbProcess.h"
 
 namespace kb {
 

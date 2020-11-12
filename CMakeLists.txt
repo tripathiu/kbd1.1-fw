@@ -19,7 +19,7 @@ target_include_directories(kbd-fw PUBLIC ${PROJECT_SOURCE_DIR}/inc)
 target_link_libraries(kbd-fw PUBLIC
     kbSystem
     kbDebug 
-    kbOutput 
+    kbKeySender
     kbKeyMatrix
     kbEvents
     pthread

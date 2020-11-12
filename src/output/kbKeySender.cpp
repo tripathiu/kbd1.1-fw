@@ -1,4 +1,4 @@
-#include "kbOutput.h"
+#include "output/kbKeySender.h"
 
 #include "kbDebug.h"
 

@@ -17,10 +17,10 @@ class Process {
   virtual ~Process(){};
   virtual void procEvent(const Event&) = 0;
 
+ protected:
   virtual void pushToQ(const Event& evt) { _evtQ.push(evt); }
   virtual void popQ(){};
 
- protected:
   EventQueue _evtQ;
 };
 

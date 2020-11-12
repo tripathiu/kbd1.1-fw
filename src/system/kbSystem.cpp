@@ -1,4 +1,4 @@
-#include "kbSystem.h"
+#include "proc/kbSystem.h"
 
 #include "kbDebug.h"
 
@@ -27,7 +27,6 @@ void wait() {
     std::this_thread::sleep_for(1s);
   }
 }
-
 
 }  // namespace System
 }  // namespace kb

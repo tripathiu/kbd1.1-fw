@@ -5,7 +5,7 @@
 #include "kbDebug.h"
 #include "kbEvents.h"
 #include "kbKeyMatrix.h"
-#include "kbSystem.h"
+#include "proc/kbSystem.h"
 
 int main() {
   using namespace kb;
