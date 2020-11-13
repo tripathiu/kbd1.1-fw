@@ -16,10 +16,13 @@ void KeySender::procEvent(const Event& evt) {
 void KeySender::run() {
   while (1) {
     if (_evtQ.size() > 0) {
-      // here is how the events are processed
+      // get first event
+      std::cout << "[kbOUT] Event[" << _evtQ.size() << "] = ";
+
       Event evt = _evtQ.front();
       _evtQ.pop();
-      std::cout << "[kbOUT] Event Popped: ";
+
+      // here is how the events are processed
       if (evt.getEvtType() == KeyDown) {
         std::cout << "Key Down: " + std::to_string(evt.getEvtCtxt());
       } else if (evt.getEvtType() == KeyRelease) {

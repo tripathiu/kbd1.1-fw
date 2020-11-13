@@ -49,3 +49,9 @@ make
 ```
 ./kbd-fw
 ```
+
+### Run using test input
+
+```
+cat test.input | ./kbd-fw
+```
