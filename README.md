@@ -52,6 +52,9 @@ make
 
 ### Run using test input
 
+If you want to automate the test process, create an input file and send it to
+the binary using standard input.
+
 ```
 cat test.input | ./kbd-fw
 ```
