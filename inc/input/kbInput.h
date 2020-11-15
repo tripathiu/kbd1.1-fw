@@ -12,10 +12,11 @@ class KeyInput : public Process {
  public:
   KeyInput();
   void procEvent(const Event&) final;
-  void run() final;
 
  private:
   void _sendEvent(EvtType, Map::XY);
+  void _setup() final;
+  void _loop() final;
 };
 
 }  // namespace kb

@@ -10,7 +10,10 @@ class KeySender : public Process {
  public:
   KeySender();
   void procEvent(const Event&) final;
-  void run() final;
+
+ private:
+  void _setup() final;
+  void _loop() final;
 };
 
 }  // namespace kb

@@ -29,6 +29,7 @@ bool dispatchEvt(const Event& evt) {
 void wait() {
   while (1) {
     using namespace std::chrono_literals;
+    // the main thread has nothing to do
     std::this_thread::sleep_for(1s);
   }
 }
