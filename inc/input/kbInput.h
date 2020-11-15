@@ -3,8 +3,8 @@
 #include <iostream>
 
 #include "kbKeyMatrix.h"
-#include "proc/kbProcess.h"
-#include "proc/kbSystemFcns.h"
+#include "sys/kbProcess.h"
+#include "sys/kbSystemFcns.h"
 
 namespace kb {
 

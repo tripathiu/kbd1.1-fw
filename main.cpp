@@ -3,9 +3,7 @@
 #include <vector>
 
 #include "kbDebug.h"
-#include "kbEvents.h"
-#include "kbKeyMatrix.h"
-#include "proc/kbSystem.h"
+#include "sys/kbSystem.h"
 
 int main() {
   using namespace kb;

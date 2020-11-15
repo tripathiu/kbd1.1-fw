@@ -9,19 +9,18 @@ KeySender::KeySender() {}
 void KeySender::procEvent(const Event& evt) {
   auto type = evt.getEvtType();
   if (type == KeyRelease || type == KeyDown || type == KeyHold) {
-    _push(evt);
+    _pushQ(evt);
   }
 }
 
 void KeySender::_setup() {}
 
 void KeySender::_loop() {
-  if (_evtQ.size() > 0) {
+  if (_sizeQ() > 0) {
     // get first event
-    std::cout << "[kbOUT] Event[" << _evtQ.size() << "] = ";
+    std::cout << "[kbOUT] Event[" << _sizeQ() << "] = ";
 
-    Event evt = _evtQ.front();
-    _evtQ.pop();
+    Event evt = _popQ();
 
     // here is how the events are processed
     if (evt.getEvtType() == KeyDown) {

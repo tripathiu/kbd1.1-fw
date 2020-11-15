@@ -9,6 +9,7 @@ enum EvtType {
   KeyHold,
   KeyRelease,
   Unknown,
+  Error,
 };
 
 /*

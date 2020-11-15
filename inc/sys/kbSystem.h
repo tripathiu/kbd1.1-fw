@@ -4,7 +4,7 @@
 
 #include "input/kbInput.h"
 #include "output/kbKeySender.h"
-#include "proc/kbProcess.h"
+#include "sys/kbProcess.h"
 
 namespace kb {
 namespace System {

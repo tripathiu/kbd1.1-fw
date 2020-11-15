@@ -1,7 +1,7 @@
-#include "proc/kbSystem.h"
+#include "sys/kbSystem.h"
 
 #include "kbDebug.h"
-#include "proc/kbSystemFcns.h"
+#include "sys/kbSystemFcns.h"
 
 namespace kb {
 namespace System {

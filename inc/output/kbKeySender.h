@@ -2,11 +2,12 @@
 
 #include <vector>
 
-#include "proc/kbProcess.h"
+#include "sys/kbEventQueue.h"
+#include "sys/kbProcess.h"
 
 namespace kb {
 
-class KeySender : public Process {
+class KeySender : public Process, public EventQueue {
  public:
   KeySender();
   void procEvent(const Event&) final;
